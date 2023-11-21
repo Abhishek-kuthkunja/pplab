@@ -1,0 +1,128 @@
+﻿1.
+enter number:100000
+
+array after sorting
+
+Time for serial is:0.013272
+Time for parallel execution is 0.046295
+
+
+2.
+pi = 3.141592653598
+
+real    0m0.009s
+user    0m0.028s
+sys     0m0.003s
+
+OR 
+
+// from test.c  file ...takes more time to execute
+Estimated value of PI: 3.141651
+
+real	0m1.920s
+user	0m5.015s
+sys	0m16.537s
+
+
+3.
+enter iterns:10
+thread 3 itern 1 value: 7
+thread 3 itern 2 value: 8
+thread 0 itern -1273357503 value: 1
+thread 0 itern -1273357502 value: 2
+thread 2 itern 1 value: 5
+thread 2 itern 2 value: 6
+thread 1 itern 32677 value: 3
+thread 1 itern 32678 value: 4
+thread 4 itern 1091955185 value: 9
+thread 4 itern 1091955186 value: 10
+
+real    0m1.643s
+user    0m0.119s
+sys     0m0.002s
+
+4.
+thread: 0 fib(0) = 0
+thread: 0 fib(1) = 1
+thread: 2 fib(4) = 3
+thread: 2 fib(5) = 5
+thread: 3 fib(6) = 8
+thread: 4 fib(8) = 21
+thread: 3 fib(7) = 13
+thread: 5 fib(10) = 55
+thread: 4 fib(9) = 34
+thread: 1 fib(2) = 1
+thread: 1 fib(3) = 2
+thread: 6 fib(12) = 144
+thread: 5 fib(11) = 89
+thread: 6 fib(13) = 233
+thread: 7 fib(14) = 377
+thread: 8 fib(16) = 987
+thread: 7 fib(15) = 610
+thread: 9 fib(17) = 1597
+thread: 11 fib(19) = 4181
+thread: 10 fib(18) = 2584
+using schedule time is : 0.029485
+
+real    0m0.037s
+user    0m0.314s
+sys     0m0.008s
+
+5.
+process : 5 , 23 
+process : 6 , 29 
+process : 10 , 43 
+process : 0 , 2 
+process : 0 , 3 
+process : 0 , 5 
+process : 8 , 37 
+process : 1 , 7 
+process : 2 , 11 
+process : 2 , 13 
+process : 11 , 47 
+process : 9 , 41 
+process : 7 , 31 
+process : 4 , 19 
+process : 3 , 17 
+The time taken is 0.017325 
+real    0m0.024s
+user    0m0.188s
+sys     0m0.000s
+
+6.
+Parallel Time 0.001506
+
+real    0m0.007s
+user    0m0.019s
+sys     0m0.003s
+
+7.
+sum is 5050
+
+real    0m0.005s
+user    0m0.003s
+sys     0m0.006s
+
+
+
+
+
+
+
+command to execute 
+
+gcc -fopenmp -o <executable_name> <file_name>.c
+
+time ./<executable_name>
+
+
+eg:- gcc -fopenmp test test.c                            ....to compile
+        time ./test                                                  ....to run the executable 
+
+‘time’ will give us the total time taken to execute the entire code ........this can be used at all places where execution time is asked. 
+
+To run the code serially, just remove the lines that contibutes to parallel execution of the code and compile and run the code using the same command. Then compare the time taken to execute the programs serially and parallely. 
+
+
+
+
